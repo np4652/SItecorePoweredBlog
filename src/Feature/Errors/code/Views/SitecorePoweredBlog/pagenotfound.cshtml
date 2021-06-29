@@ -1,0 +1,12 @@
+﻿@{ 
+    var item = Sitecore.Context.Database.GetItem("{F99D3359-A473-435F-A7EC-66F91DB4EBC0}");
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center text-warning">
+            <h1>@Html.Sitecore().Field("Code", item)</h1>
+            @Html.Sitecore().Field("Description", item)
+            <p>@Html.Sitecore().Field("returnurlText", item) : <a href="http://sitecorepoweredblog.com/">@Html.Sitecore().Field("UrlButtonText", item)</a></p>
+        </div>
+    </div>
+</div>
